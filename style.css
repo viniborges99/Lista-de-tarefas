@@ -1,0 +1,133 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --cor01:#034C8C;
+    --cor02:#03658C;
+    --cor03:#04BEC4;
+    --cor04:#CCFFEB;
+    --cor05:#FFFFFF;
+
+    
+}
+body{
+    background-color:var(--cor04);
+}
+h1{
+    text-align: center;
+    font-size: 2.3em;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    padding-bottom: 20px;
+}
+
+#botao-adicionar{
+    background-color: var(--cor02);
+    height: 40px;
+    width: 100px;
+    margin-left: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 1em;
+    border: 1px solid rgba(0, 0, 0, 0.479);
+   
+}
+#botao-adicionar:hover{
+    opacity: 0.8;
+}
+#botao-adicionar:active{
+    opacity: 0.6;
+    color: var(--cor03);
+}
+.container{
+   background-image: linear-gradient(to top,var(--cor01), var(--cor03));
+   width: 541px;
+   border-radius: 5px;
+   display: block;
+   margin: auto;
+   margin-top: 95px;
+   padding: 30px 20px;
+   box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.562);
+}
+#input-pricipal{
+    width: 320px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.479);
+    border-radius: 5px;  
+    box-shadow: 2px 1px 5px rgb(0 0 0 / 36%);
+    padding-left: 10px;
+}
+#tarefas{
+    width: 100%;
+    list-style: none;
+    margin-top: 60px;
+
+}
+.item-tarefa{
+    background-color: var(--cor05);
+    border-radius: 5px;
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.562);
+    padding: 20px 30px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+}
+.nome-tarefa{
+    color: black;
+    font-size: 15px;
+    padding-left: 20px;
+    font-weight: bold;
+
+}
+.botao-delete{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    cursor: pointer;
+    opacity: 0;
+    transition:  opacity0.5s ease-in-out;
+    
+}
+.fa-trash{
+    color: red;
+
+}
+.botao-foquete{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    cursor: pointer;
+    opacity: 0;
+    transition:  opacity0.5s ease-in-out;
+    
+}
+.fa-rocket{
+    color: var(--cor01);
+}
+.item-tarefa:hover .botao-delete{
+    opacity: 1;
+}
+.item-tarefa:hover .botao-foquete{
+    opacity: 1;
+}
+.concluido{
+    background-color: black;
+    text-decoration: line-through;
+    color: white;
+}
+
